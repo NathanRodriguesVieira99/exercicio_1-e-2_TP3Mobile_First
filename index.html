@@ -1,22 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
+  <script src="https://kit.fontawesome.com/bdcb6727d5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>tp mobile first</title>
 </head>
-
 <body>
+  <div class="containerOdin">
+    <header class="header">
+      <div class="menu-burger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
 
+    <nav id="mobile-menu" class="mobile-menu">
+      <div class="menu-close" onclick="toggleMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <ul class="lista-menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <ul class="lista-menu-desktop">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
+    <main class="main">
+      <div class="colunaEsquerda">
+        <a href="https://www.youtube.com/watch?v=iBF1VmGAvgc&ab_channel=elpatron" target="_blank">Saiba Mais Sobre o álbum</a>
+        <a href="https://www.youtube.com/watch?v=F_6IjeprfEs&ab_channel=RoadrunnerRecords" target="_blank">Clipe de Roots Bloody Roots</a>
+        <h1>Ajude os Povos Originários do Brasil</h1>
+        <p>Acesse: <a href="https://terrasindigenas.org.br/" target="_blank">https://terrasindigenas.org.br/</a></p>
+      </div>
+      <div class="colunaCentral">
+        <picture>
+          <source srcset="https://i.scdn.co/image/ab67616d0000b2730bd5e7cce9765c2ef519424e" media="(min-width: 768px)">
+          <img src="https://lastfm.freetls.fastly.net/i/u/ar0/6317c8389b36366800f02583398db3e0.jpg" alt="Capa do álbum Roots" style="object-fit: cover; width: 100%; height: auto;">
+        </picture>
+      </div>
+      <div class="colunaDireita">
+        <h1>Sobre a tribo Karajá</h1>
+        <p>Você sabia que a indígena na capa do álbum Roots do Sepultura é da tribo Karajá?</p>
+        <p>Saiba mais sobre a história dessa tribo em: <a href="https://pib.socioambiental.org/pt/Povo:Karaj%C3%A1" target="_blank">https://pib.socioambiental.org/pt/Povo:Karaj%C3%A1</a></p>
+      </div>
+    </main>
 
-
-
-
+    <footer class="footer">
+      <p>© 2024 Nathan Rodrigues - Todos os direitos reservados.</p>
+      <div class="paiDasListas">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/nathan-rodrigues-vieira-207747252/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://github.com/NathanRodriguesVieira99?tab=repositories" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
