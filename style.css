@@ -21,23 +21,19 @@ html {
 
 .header {
   background-color: lightgray;
-  position: relative;
   width: 100%;
   padding: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* menuzinho */
-
 .menu-burger {
-  color: red;
   font-size: 30px;
   cursor: pointer;
 }
 
-
+/* Menu Mobile */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -45,211 +41,189 @@ html {
   left: 0;
   height: 100vh;
   width: 250px;
-  background-color: #ffffff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
   z-index: 1000;
   padding-top: 60px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  background-image: url('https://img.socioambiental.org/d/212747-1/karaja_11.jpg');
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  object-fit: contain;
+  background-image: url('');
+
 }
+
+
 
 .menu-close {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 30px;
-  color: red;
   cursor: pointer;
-  z-index: 1;
 }
 
 .lista-menu {
-  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
 }
 
 .lista-menu li {
   margin: 20px 0;
-  text-align: left;
 }
 
 .lista-menu li a {
-  color: red;
-  text-decoration: none;
+  color: black;
   font-size: 20px;
-  margin: 10px;
+  padding: 10px;
 }
 
+.mobile-menu.open {
+  display: block;
+}
+
+/* Menu Mobile */
+
+/* Menu Desktop */
 .lista-menu-desktop {
   display: none;
 }
 
-
-.mobile-menu.open {
-  display: block;
-  transform: translateX(0);
+.lista-menu-desktop li {
+  margin-right: 15px;
 }
 
-/* menuzinho */
+.lista-menu-desktop li a {
+  color: black;
+  font-size: 18px;
+}
 
-
+/* Menu Desktop */
 
 .main {
   display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.colunaCentral {
-  width: 100%;
-  padding: 5px;
+.colunaEsquerda,
+.colunaCentral,
+.colunaDireita {
+  padding: 10px;
 }
 
 .colunaEsquerda {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding: 10px;
-  gap: 3px;
-}
-
-.colunaEsquerda h1 {
-  margin-top: 10px;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .colunaEsquerda a {
   color: black;
 }
 
-.colunaDireita {
-  padding: 10px;
-}
-
-.colunaDireita a {
-  color: black;
-}
-
-.colunaDireita h1 {
-  font-size: 40px;
-}
-
 .colunaDireita p {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
+.imgRoots {
+  width: 50%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
 .footer {
-  background-color: gray;
-  margin-top: auto;
-
-}
-
-.footer p {
-  margin-left: 5px;
-}
-
-.paiDasListas ul {
   display: flex;
-  justify-content: center;
+  background-color: black;
+  color: white;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer a {
+  color: white;
+}
+
+.paiDasListasFooter ul {
+  display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 5px;
-  gap: 9px;
+  gap: 5px;
   font-size: 20px;
-
 }
 
-.paiDasListas a {
-  color: black;
+.imgLuta {
+  display: none;
 }
 
-/* media querie para tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-
+/* Media Queries para tablets e desktops */
+@media (min-width: 768px) {
   .containerOdin {
     max-width: 768px;
   }
 
   .header {
-    background-color: lightgray;
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
-
-  }
-
-  .menu-burger {
-    font-size: 49px;
-  }
-
-  .menu-close {
-    font-size: 49px;
-  }
-
-
-  .mobile-menu {
-    width: 450px;
-  }
-
-  .lista-menu li a {
-    color: red;
-    text-decoration: none;
-    font-size: 40px;
-    margin: 20px;
-  }
-
-  .lista-menu-desktop {
-    display: none;
   }
 
   .main {
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .main h1 {
-    font-size: 44px;
+  .colunaEsquerda,
+  .colunaDireita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  .main p {
-    font-size: 22px;
+  .colunaDireita h1 {
+    font-size: 45px;
   }
 
-  .main a {
-    font-size: 22px;
+  .colunaEsquerda h1 {
+    font-size: 45px;
   }
 
+  .colunaDireita p {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .imgRoots {
+    width: 100%;
+  }
+
+  .colunaEsquerda p {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .colunaEsquerda a {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+
+  .colunaCentral {
+    flex: 2;
+  }
+
+
+  .imgLuta {
+    display: block;
+    object-fit: contain;
+    padding: 10px;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+
+  .footer {
+
+    margin-top: auto;
+  }
 }
-
-.footer {
-  height: 100px;
-  font-size: 25px;
-}
-
-.footer p {
-  margin-top: 10px;
-  margin: 15px;
-}
-
-.footer i {
-  font-size: 25px;
-}
-
-
-/* media querie para tablets */
-
-/* media querie para desktops */
 
 @media (min-width: 1024px) {
   .containerOdin {
@@ -258,56 +232,52 @@ html {
   }
 
   .menu-burger {
-    display: none; 
+    display: none;
   }
 
-  .lista-menu {
-    display: none; 
+  #lista-menu-desktop {
+    display: flex;
   }
 
-  .lista-menu-desktop {
-    display: flex; 
-    justify-content: flex-end; 
+  #lista-menu-desktop a {
+    font-size: 35px;
+    transition: ease-in  ;
+  }
+  #lista-menu-desktop a:hover {
+    color: red;
+  }
+
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .colunaDireita h1 {
+    font-size: 65px;
+  }
+
+  .colunaEsquerda h1 {
+    font-size: 65px;
+  }
+
+  .colunaDireita p {
+    font-size: 35px;
+    font-weight: 400;
+  }
+
+  .imgRoots {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: lightgray; 
-    list-style: none;
+  }
+ 
+ 
+  .colunaEsquerda p {
+    font-size: 35px;
+    font-weight: 400;
   }
 
-  .lista-menu-desktop li {
-    margin: 0 15px; 
+  .colunaEsquerda a {
+    font-size: 28px;
+    font-weight: 400;
   }
 
-  .lista-menu-desktop li a {
-    color: red; 
-    text-decoration: none;
-    font-size: 18px; 
-    padding: 10px; 
-  }
-
-  .main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .colunaEsquerda,
-  .colunaCentral,
-  .colunaDireita {
-    flex: 1;
-    padding: 10px;
-  }
-
-  .colunaCentral {
-    flex: 2;
-  }
-
-  .colunaEsquerda,
-  .colunaDireita {
-    display: flex;
-    flex-direction: column;
-  }
 }
-/* media querie para desktops */
